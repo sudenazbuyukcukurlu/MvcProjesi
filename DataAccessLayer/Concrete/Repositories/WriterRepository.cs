@@ -14,12 +14,12 @@ namespace DataAccessLayer.Concrete.Repositories
     {
         Context c = new Context();
         DbSet<Writer> _object;
-        public void Delete(Writer t)
+        public void Delete(Writer p)
         {
             throw new NotImplementedException();
         }
 
-        public void Insert(Writer t)
+        public void Insert(Writer p)
         {
             throw new NotImplementedException();
         }
@@ -34,7 +34,7 @@ namespace DataAccessLayer.Concrete.Repositories
             throw new NotImplementedException();
         }
 
-        public void Update(Writer t)
+        public void Update(Writer p)
         {
             throw new NotImplementedException();
         }
