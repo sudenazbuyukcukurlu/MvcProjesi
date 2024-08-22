@@ -11,7 +11,7 @@ namespace BusinessLayer.Concrete
     public class CategoryManager
     {
         GenericRepository<Category> repo=new GenericRepository<Category>();
-        public List<Category> GetAll()
+        public List<Category> GetAllBl()
         {
             return repo.List();
         }
@@ -21,10 +21,11 @@ namespace BusinessLayer.Concrete
             {
                 //hata mesajı
             }
-            else {
+            else
+            {
                 repo.Insert(p);
             }
 
-
+        }
     }
 }
