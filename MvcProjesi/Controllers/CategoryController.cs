@@ -30,7 +30,7 @@ namespace MvcProjesi.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category p)
         {
-          // cm.CategoryAddBL(p);
+            cm.CategoryAddBL(p);
             return RedirectToAction("GetCategoryList");
         }
     }
