@@ -21,9 +21,5 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.CategoryName).MaximumLength(20).WithMessage("En fazla 20 karakter girişi yapabilirsiniz");
         }
 
-        public ValidationResult Validate(Category p)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

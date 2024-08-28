@@ -12,6 +12,8 @@ using System.Web.Helpers;
 using System.Web.Mvc;
 
 
+
+
 namespace MvcProjesi.Controllers
 {
     public class CategoryController : Controller
@@ -30,6 +32,7 @@ namespace MvcProjesi.Controllers
         [HttpGet]
         public ActionResult AddCategory()
         {
+            
             return View();
         }
         [HttpPost]
@@ -40,7 +43,7 @@ namespace MvcProjesi.Controllers
             ValidationResult results = categoryValidator.Validate(p);
             if (results.IsValid)
             {
-                cm.CategoryAddBL(p);
+                cm.CategoryAdd(p);
                 return RedirectToAction("GetCategoryList");
             }
             else
@@ -53,7 +56,7 @@ namespace MvcProjesi.Controllers
             return View();
 
 
-            return RedirectToAction("GetCategoryList");
+           
         }
     }
 }

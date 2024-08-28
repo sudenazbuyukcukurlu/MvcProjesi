@@ -1,16 +1,27 @@
-﻿<
+﻿
 @{
     Layout = null;
 }
 
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
 <h1>
-    yeni kategori ekleme sayfası
+    Yeni kategori ekleme sayfası
 </h1>
-<br/>
-<form class="form-group" method="post">
-    <input type="text" placeholder="kategori adı" name="CategoryName" class="form-control" />
-    <br/>
-    <input type="text" placeholder="açıklama giriniz" name="CategoryDescription" class="form-control" />
-    <br />
-    <button class="btn btn-primary">Ekle</button>
-</form>
+<br />
+
+@using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Kategori Adı")
+        @Html.TextBoxFor(x => x.CategoryName)
+
+    </div>
+}
+@*<form class="form-group" method="post">
+        <input type="text" placeholder="kategori adı" name="CategoryName" class="form-control" />
+        <br/>
+        <input type="text" placeholder="açıklama giriniz" name="CategoryDescription" class="form-control" />
+        <br />
+        <button class="btn btn-primary">Ekle</button>
+    </form>*@
