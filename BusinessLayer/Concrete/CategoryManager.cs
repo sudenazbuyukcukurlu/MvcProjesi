@@ -25,17 +25,24 @@ namespace BusinessLayer.Concrete
         {
             return _categorydal.List();
         }
-        public void CategoryAddBL(Category p)
-        {
-            if (p.CategoryName == "" || p.CategoryStatus == false || p.CategoryName.Length <= 2)
-            {
-                // hata mesajı
-            }
-            else
-            {
-                _categorydal.Insert(p);
-            }
+        //public void CategoryAddBL(Category p)
+        //{
+        //    if (p.CategoryName == "" || p.CategoryStatus == false || p.CategoryName.Length <= 2)
+        //    {
+        //        // hata mesajı
+        //    }
+        //    else
+        //    {
+        //        _categorydal.Insert(p);
+        //    }
 
+        //}
+
+        public void CategoryAddBL(Category category)
+        {
+           _categorydal.Insert(category);
         }
+
+       
     }
 }
