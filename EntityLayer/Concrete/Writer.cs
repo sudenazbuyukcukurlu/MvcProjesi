@@ -1,19 +1,18 @@
-﻿using EntityLayer.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityLayer
+namespace EntityLayer.Concrete
 {
     public class Writer
     {
         [Key]
         public int WriterID { get; set; }
         [StringLength(50)]
-        public string   WriterName { get; set; }
+        public string WriterName { get; set; }
         [StringLength(50)]
         public string WriterSurName { get; set; }
         [StringLength(50)]
@@ -23,7 +22,7 @@ namespace EntityLayer
         [StringLength(50)]
         public string WriterPassword { get; set; }
         [StringLength(50)]
-        public ICollection<Heading> Headings{ get; set; }
+        public ICollection<Heading> Headings { get; set; }
         public ICollection<Content> Contents { get; set; }
     }
 }

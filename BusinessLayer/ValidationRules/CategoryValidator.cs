@@ -1,4 +1,4 @@
-﻿using EntityLayer;
+﻿using EntityLayer.Concrete;
 using FluentValidation;
 using FluentValidation.Results;
 using System;
