@@ -43,6 +43,9 @@ namespace BusinessLayer.Concrete
            _categorydal.Insert(category);
         }
 
-       
+        public Category GetByID(int id)
+        {
+           return _categorydal.Get(x=>x.CategoryId==id);
+        }
     }
 }

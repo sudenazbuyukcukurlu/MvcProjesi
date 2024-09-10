@@ -43,5 +43,9 @@ namespace DataAccessLayer.Concrete.Repositories
         {
             c.SaveChanges();
         }
+
+        public T Get(Expression<Func<T, bool>> Filter)
+        {
+            return _object.SingleOrDefault(Filter);
     }
 }
