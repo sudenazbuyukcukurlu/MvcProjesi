@@ -47,5 +47,6 @@ namespace DataAccessLayer.Concrete.Repositories
         public T Get(Expression<Func<T, bool>> Filter)
         {
             return _object.SingleOrDefault(Filter);
+        }
     }
 }
