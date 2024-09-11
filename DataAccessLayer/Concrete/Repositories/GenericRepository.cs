@@ -15,7 +15,9 @@ namespace DataAccessLayer.Concrete.Repositories
         DbSet<T> _object;
         public void Delete(T p)
         {
-            _object.Remove(p);
+            var deletedentity=c.Entry(p);
+            deletedentity.State=EntityState.Deleted;
+           // _object.Remove(p);
             c.SaveChanges();
         }
         public GenericRepository() 
@@ -25,7 +27,9 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Insert(T p)
         {
-            _object.Add(p);
+            var addedentity = c.Entry(p);
+            addedentity.State = EntityState.Added;
+           // _object.Add(p);
             c.SaveChanges();
         }
 
@@ -41,6 +45,8 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public void Update(T p)
         {
+            var updatedentity = c.Entry(p);
+            updatedentity.State=EntityState.Modified;
             c.SaveChanges();
         }
 
