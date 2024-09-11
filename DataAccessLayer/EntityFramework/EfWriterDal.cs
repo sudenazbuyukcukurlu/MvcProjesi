@@ -10,36 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
-    public class EfWriterDal : GenericRepository<Category>, IWriterDal
+    public class EfWriterDal : GenericRepository<Writer>, IWriterDal
     {
-        public void Delete(Writer t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Writer Get(Expression<Func<Writer, bool>> Filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Insert(Writer t)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Writer> List(Expression<Func<Writer, bool>> filter)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Writer t)
-        {
-            throw new NotImplementedException();
-        }
-
-        List<Writer> IRepository<Writer>.List()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

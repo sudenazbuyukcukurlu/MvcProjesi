@@ -13,7 +13,8 @@ namespace MvcProjesi.Controllers
         WriterManager wm = new WriterManager(new EfWriterDal());
         public ActionResult Index()
         {
-            return View();
+            var WriterValues=wm.GetList();
+            return View(WriterValues);
         }
     }
 }
